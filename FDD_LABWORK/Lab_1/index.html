@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+        }
+        h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+        }
+        td {
+            border: 2px solid #333;
+            padding: 15px;
+            vertical-align: top;
+        }
+        .header {
+            background-color: #FFD700;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .content {
+            background-color: #E6E6FA;
+        }
+        .content a {
+            text-decoration: underline;
+            color: blue;
+            display: block;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .days {
+            font-weight: bold;
+        }
+        .time {
+            font-style: italic;
+        }
+        .closed {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h3>ABC Restaurant</h3>
+    
+    <table>
+        <tr>
+            <td class="header">Operating Hours</td>
+            <td class="header">Our Menu</td>
+        </tr>
+        <tr>
+            <td class="content">
+                <div class="days">Monday - Saturday</div>
+                <div class="time">7:30am - 11:30pm</div>
+                <br>
+                <div class="days">Sunday</div>
+                <div class="closed">Closed</div>
+            </td>
+            <td class="content">
+                <a href="breakfast.html">Breakfast</a>
+                <a href="lunch.html">Lunch</a>
+                <a href="dinner.html">Dinner</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
