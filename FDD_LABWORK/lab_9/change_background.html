@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+margin:0;
+height:100vh;
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+font-family:Arial;
+text-shadow:2px 2px 4px rgba(0,0,0,0.5);
+}
+.greeting{font-size:48px;margin-bottom:20px;}
+.datetime{font-size:24px;}
+</style>
+</head>
+<body>
+<div class="greeting" id="greeting"></div>
+<div class="datetime" id="datetime"></div>
+
+<script>
+function updatePage(){
+let now=new Date();
+let hour=now.getHours();
+let minute=now.getMinutes();
+let currentTime=hour*100+minute;
+
+let background,message;
+
+if(currentTime>=600&&currentTime<=1159){
+background='morning.jpg';
+message='Good Morning!';
+}else if(currentTime>=1200&&currentTime<=1859){
+background='afternoon.jpg';
+message='Good Afternoon!';
+}else{
+background='evening.jpg';
+message='Good Evening!';
+}
+
+document.body.style.backgroundImage=`url('${background}')`;
+document.body.style.backgroundSize='cover';
+document.body.style.backgroundPosition='center';
+document.getElementById('greeting').textContent=message;
+document.getElementById('datetime').textContent=now.toLocaleString();
+}
+
+updatePage();
+setInterval(updatePage,1000);
+</script>
+</body>
+</html>

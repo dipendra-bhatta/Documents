@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Menu System - Single Box</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f0; }
+        
+        .menu-box { width: 200px; min-height: 300px; border-radius: 8px; overflow: hidden; }
+        
+        /* Hide radio buttons */
+        input[type="radio"] { display: none; }
+        
+        .menu-item {
+            padding: 15px 20px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .orange { background: #ff6b47; }
+        .teal { background: #7dd3c9; }
+        
+        .submenu { display: none; }
+        
+        .submenu-item {
+            padding: 12px 20px 12px 40px;
+            cursor: pointer;
+            color: white;
+            background: #ff6b47;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .submenu-item:hover { background: #ffd700; color: #333; }
+        .submenu-item.active { background: #ffd700; color: #333; }
+        
+        /* Show submenu when radio is checked */
+        #html-radio:checked ~ .html-section .submenu,
+        #css-radio:checked ~ .css-section .submenu,
+        #js-radio:checked ~ .js-section .submenu {
+            display: block;
+        }
+        
+        /* Change active menu item color */
+        #html-radio:checked ~ .html-section .menu-item,
+        #css-radio:checked ~ .css-section .menu-item,
+        #js-radio:checked ~ .js-section .menu-item {
+            background: #ff6b47;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-box">
+        <input type="radio" id="html-radio" name="menu">
+        <input type="radio" id="css-radio" name="menu">
+        <input type="radio" id="js-radio" name="menu">
+        
+        <div class="html-section">
+            <label for="html-radio" class="menu-item teal">HTML</label>
+            <div class="submenu">
+                <div class="submenu-item active">HTML Forms</div>
+                <div class="submenu-item">HTML5</div>
+                <div class="submenu-item">HTML Graphics</div>
+                <div class="submenu-item">HTML Media</div>
+                <div class="submenu-item">HTML APIs</div>
+            </div>
+        </div>
+        
+        <div class="css-section">
+            <label for="css-radio" class="menu-item teal">CSS</label>
+            <div class="submenu">
+                <div class="submenu-item">CSS3</div>
+                <div class="submenu-item">CSS Layout</div>
+                <div class="submenu-item active">CSS Box Model</div>
+                <div class="submenu-item">CSS Responsive</div>
+            </div>
+        </div>
+        
+        <div class="js-section">
+            <label for="js-radio" class="menu-item teal">JavaScript</label>
+            <div class="submenu">
+                <div class="submenu-item">JS Forms</div>
+                <div class="submenu-item">JS Objects</div>
+                <div class="submenu-item">JS Functions</div>
+                <div class="submenu-item">JS HTML DOM</div>
+                <div class="submenu-item">JS Browser BOM</div>
+                <div class="submenu-item">JS AJAX</div>
+                <div class="submenu-item">JS JSON</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

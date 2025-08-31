@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #wrapper {
+            margin: 0 auto;
+            width: 900px;
+        }
+
+        #header {
+            width: 100%;
+            height: 200px;
+        }
+
+        #round {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        #menu {
+            width: 100%;
+            height: 50px;
+            background-color: gray;
+            margin-top: 5px;
+        }
+
+        #content {
+            width: 100%;
+            display: flex;
+            margin-top: 5px;
+        }
+
+        #image {
+            width: 33%;
+            height: 200px;
+            background-color: yellow;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        #text {
+            width: 33%;
+            height: 150px;
+            float: left;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+        </div>
+        <div id="menu">
+        </div>
+        <div id="content">
+        </div>
+        <div id="content">
+            <div id="header">
+                <div style="float:left; margin-right:5px;">
+                    <div id="round" style="background-color:red;">Text</div>
+                </div>
+                <div style="float:left; margin-right:5px;">
+                    <div id="round" style="background-color:yellow;">Text</div>
+                </div>
+                <div style="float:left; margin-right:5px;">
+                    <div id="round" style="background-color:green;">Text</div>
+                </div>
+            </div>
+            <div id="menu">
+                Menu Text
+            </div>
+            <div id="content">
+                <div id="image" style="float: left">Img 1</div>
+                <div id="image" style="margin: auto;">Img 2</div>
+                <div id="image" style="float: right">Img 3</div>
+            </div>
+            <div id="content">
+                <div id="text" style="float: left">Text 1</div>
+                <div id="text" style="margin: auto;">Text 2</div>
+                <div id="text" style="float: right">Text 3</div>
+            </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.car{position:absolute;top:70%;animation:move 3s infinite linear;width:250px;}
+.sun{position:absolute;top:10%;left:10%;animation:rotate 4s infinite linear;width:100px;}
+@keyframes move{0%{left:90%;}100%{left:0%;}}
+@keyframes rotate{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+body{background:url('background.png');background-size:cover;height:100vh;margin:0;}
+</style>
+</head>
+<body>
+<img src="car.png" class="car">
+<img src="sun.png" class="sun">
+</body>
+</html>

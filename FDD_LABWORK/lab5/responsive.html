@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.container { max-width: 1200px; margin: 20px auto; padding: 10px; }
+.header { background: #FFC107; padding: 20px; text-align: center; font-weight: bold; }
+.box { padding: 20px; margin: 2px; font-weight: bold; }
+.box1 { background: #BBDEFB; }
+.box2 { background: #F8BBD9; }
+.box3 { background: #C8E6C9; }
+.box4 { background: #D1C4E9; }
+.box5 { background: #FFCDD2; }
+.box6 { background: #FFF9C4; }
+.box7 { background: #A5D6A7; }
+.box8 { background: #DCEDC1; }
+.footer { background: #4CAF50; padding: 20px; text-align: center; font-weight: bold; }
+
+/* Mobile View - Default */
+.grid { display: flex; flex-direction: column; }
+
+/* Tablet View - 4 columns */
+@media (min-width: 768px) {
+  .grid { display: grid; grid-template-columns: repeat(4, 25%); }
+}
+
+/* Desktop View - 2 columns (25% + 75%) */
+@media (min-width: 1024px) {
+  .grid { display: grid; grid-template-columns: 25% 75%; }
+  .box:nth-child(odd) { grid-column: 1; }
+  .box:nth-child(even) { grid-column: 2; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">This is header</div>
+  
+  <div class="grid">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+    <div class="box box4">Box 4</div>
+    <div class="box box5">Box 5</div>
+    <div class="box box6">Box 6</div>
+    <div class="box box7">Box 7</div>
+    <div class="box box8">Box 8</div>
+  </div>
+  
+  <div class="footer">Footer</div>
+</div>
+</body>
+</html>

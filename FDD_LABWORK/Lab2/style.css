@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #F0F8FF;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.menu-item img {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 1px solid #999;
+}
+
+.menu-details {
+    flex: 1;
+}
+
+/* Method 1: Using flexbox with gap instead of space-between */
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.item-name {
+    font-size: 16px;
+}
+
+.item-price {
+    font-size: 16px;
+}
+
+.home-link {
+    margin-top: 30px;
+}
+
+.home-link a {
+    color: blue;
+    text-decoration: underline;
+}

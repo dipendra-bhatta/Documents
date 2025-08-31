@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{font-family:Arial;padding:20px;}
+button{padding:10px 20px;margin:10px;font-size:16px;}
+</style>
+</head>
+<body>
+<h2>Age Calculator</h2>
+<button onclick="getName()">Start</button>
+<div id="result"></div>
+
+<script>
+function getName(){
+let name=prompt('What is your name?');
+if(name){
+getBirthYear(name);
+}
+}
+function getBirthYear(name){
+let year=prompt('What is your birth year?');
+if(year){
+let age=new Date().getFullYear()-parseInt(year);
+document.getElementById('result').innerHTML=`<h3>Hello ${name}! You are ${age} years old!</h3>`;
+}
+}
+</script>
+</body>
+</html>

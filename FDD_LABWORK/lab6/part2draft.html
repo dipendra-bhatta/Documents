@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Menu System - CSS Only</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f0; }
+        
+        .menu-container { display: flex; gap: 20px; }
+        .menu-box { width: 200px; min-height: 300px; border-radius: 8px; overflow: hidden; }
+        
+        /* Hide checkboxes */
+        input[type="checkbox"] { display: none; }
+        
+        .menu-item {
+            padding: 15px 20px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .orange { background: #ff6b47; }
+        .teal { background: #7dd3c9; }
+        
+        .submenu {
+            display: none;
+        }
+        
+        .submenu-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            color: white;
+            background: #ff6b47;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .submenu-item:hover { background: #ffd700; color: #333; }
+        .submenu-item.active { background: #ffd700; color: #333; }
+        
+        /* Show submenu when checkbox is checked */
+        #html-toggle:checked ~ #html-submenu,
+        #css-toggle:checked ~ #css-submenu,
+        #js-toggle:checked ~ #js-submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <!-- HTML Menu Box -->
+        <div class="menu-box">
+            <input type="checkbox" id="html-toggle">
+            <label for="html-toggle" class="menu-item orange">HTML</label>
+            <div id="html-submenu" class="submenu">
+                <div class="submenu-item active">HTML Forms</div>
+                <div class="submenu-item">HTML5</div>
+                <div class="submenu-item">HTML Graphics</div>
+                <div class="submenu-item">HTML Media</div>
+                <div class="submenu-item">HTML APIs</div>
+            </div>
+            <div class="menu-item teal">CSS</div>
+            <div class="menu-item teal">JavaScript</div>
+        </div>
+        
+        <!-- CSS Menu Box -->
+        <div class="menu-box">
+            <div class="menu-item teal">HTML</div>
+            <input type="checkbox" id="css-toggle">
+            <label for="css-toggle" class="menu-item orange">CSS</label>
+            <div id="css-submenu" class="submenu">
+                <div class="submenu-item">CSS3</div>
+                <div class="submenu-item">CSS Layout</div>
+                <div class="submenu-item active">CSS Box Model</div>
+                <div class="submenu-item">CSS Responsive</div>
+            </div>
+            <div class="menu-item teal">JavaScript</div>
+        </div>
+        
+        <!-- JavaScript Menu Box -->
+        <div class="menu-box">
+            <div class="menu-item teal">HTML</div>
+            <div class="menu-item teal">CSS</div>
+            <input type="checkbox" id="js-toggle">
+            <label for="js-toggle" class="menu-item orange">JavaScript</label>
+            <div id="js-submenu" class="submenu">
+                <div class="submenu-item">JS Forms</div>
+                <div class="submenu-item">JS Objects</div>
+                <div class="submenu-item">JS Functions</div>
+                <div class="submenu-item">JS HTML DOM</div>
+                <div class="submenu-item">JS Browser BOM</div>
+                <div class="submenu-item">JS AJAX</div>
+                <div class="submenu-item">JS JSON</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
